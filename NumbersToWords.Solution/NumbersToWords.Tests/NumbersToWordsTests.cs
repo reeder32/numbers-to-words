@@ -13,9 +13,9 @@ namespace NumbersToWords.Tests
       string input = "Hello world";
       NumberConverter converter = new NumberConverter();
 
-      string result = converter.Convert(input);
+      string result = converter.Convert(input, "world");
 
-      string output = "Hello Univers";
+      string output = "Hello Universe";
 
       Assert.AreEqual(result, output);
     }
