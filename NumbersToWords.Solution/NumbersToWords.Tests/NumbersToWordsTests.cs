@@ -70,8 +70,48 @@ namespace NumbersToWords.Tests
 
       Assert.AreEqual(output, result);
     }
+
+    [TestMethod]
+    public void ShouldReplace100_One_Hundred()
+    {
+      string input = "100";
+      NumberConverter converter = new NumberConverter();
+
+      string result = converter.ConvertNumberToWord(input);
+
+      string output = "one hundred";
+
+      Assert.AreEqual(output, result);
+    }
+
+    [TestMethod]
+    public void ShouldReplace384_ThreeHundredEightyFour()
+    {
+      string input = "384";
+      NumberConverter converter = new NumberConverter();
+
+      string result = converter.ConvertNumberToWord(input);
+
+      string output = "three hundred eighty four";
+
+      Assert.AreEqual(output, result);
+    }
+
+    [TestMethod]
+    public void ShouldReplace1245_OneThousandTwoHundredFortyFive()
+    {
+      string input = "1245";
+      NumberConverter converter = new NumberConverter();
+
+      string result = converter.ConvertNumberToWord(input);
+
+      string output = "one thousand two hundred forty five";
+
+      Assert.AreEqual(output, result);
+    }
   }
 }
+
 // input = "1"
 // convert to int -> wordNumbers[int.input]
 // let wordNumbers = ["zero", "one", "two", "three"]
