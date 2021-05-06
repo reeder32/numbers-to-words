@@ -44,5 +44,34 @@ namespace NumbersToWords.Tests
 
       Assert.AreEqual(result, output);
     }
+
+    [TestMethod]
+    public void ShouldReplace10_Ten()
+    {
+      string input = "10";
+      NumberConverter converter = new NumberConverter();
+
+      string result = converter.ConvertNumberToWord(input);
+
+      string output = "ten";
+
+      Assert.AreEqual(result, output);
+    }
   }
 }
+// input = "1"
+// convert to int -> wordNumbers[int.input]
+// let wordNumbers = ["zero", "one", "two", "three"]
+
+//go backwards through number string
+//based on position look up dictionary
+// 1253
+// check how long to determine what to divide by
+// 1253 / 1000 = 1
+// 1253 % 1000 = 253
+// continue for 100, 10
+
+//dictionary ones = {1, "one"}, ...
+//teens, tens
+//array of words for hundred, thousands etc
+//every number broken up into threes
