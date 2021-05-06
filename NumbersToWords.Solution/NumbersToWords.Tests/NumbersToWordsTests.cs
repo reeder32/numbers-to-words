@@ -46,16 +46,29 @@ namespace NumbersToWords.Tests
     }
 
     [TestMethod]
-    public void ShouldReplace10_Ten()
+    public void ShouldReplace11_Eleven()
     {
-      string input = "10";
+      string input = "11";
       NumberConverter converter = new NumberConverter();
 
       string result = converter.ConvertNumberToWord(input);
 
-      string output = "ten";
+      string output = "eleven";
 
-      Assert.AreEqual(result, output);
+      Assert.AreEqual(output, result);
+    }
+
+    [TestMethod]
+    public void ShouldReplace23_TwentyThree()
+    {
+      string input = "23";
+      NumberConverter converter = new NumberConverter();
+
+      string result = converter.ConvertNumberToWord(input);
+
+      string output = "twenty three";
+
+      Assert.AreEqual(output, result);
     }
   }
 }
